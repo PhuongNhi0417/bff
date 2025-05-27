@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Chúc Mừng Sinh Nhật Bé Thu Hường</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 20px;
+      font-family: Arial, sans-serif;
+      background: linear-gradient(45deg, #ff6ec4, #7873f5);
+      color: white;
+      text-align: center;
+      overflow-x: hidden;
+    }
+
+    #content {
+      position: relative;
+      z-index: 2;
+    }
+
+    h1 {
+      font-size: 2.5em;
+      color: #ff4081;
+      text-shadow: 0 0 10px #ff4081;
+      margin-top: 20px;
+    }
+
+    p {
+      font-size: 1.2em;
+      max-width: 700px;
+      margin: 20px auto;
+      text-shadow: 0 0 5px #000;
+      line-height: 1.6;
+    }
+
+    .avatar {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 5px solid #ff4081;
+      box-shadow: 0 0 15px #ff4081;
+      margin-top: 20px;
+    }
+
+    audio {
+      margin-top: 25px;
+      filter: drop-shadow(0 0 5px #ff4081);
+    }
+
+    video#fireworks-bg {
+      position: fixed;
+      top: 0;
+      left: 0;
+      min-width: 100%;
+      min-height: 100%;
+      object-fit: cover;
+      opacity: 0.5;
+      z-index: 0;
+    }
+
+    .heart {
+      position: fixed;
+      top: -50px;
+      font-size: 24px;
+      color: #ff69b4;
+      animation: float 5s linear infinite;
+      z-index: 3;
+    }
+
+    @keyframes float {
+      0% {
+        transform: translateY(0) scale(1);
+        opacity: 1;
+      }
+      100% {
+        transform: translateY(100vh) scale(1.5);
+        opacity: 0;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Nền pháo hoa -->
+  <video autoplay loop muted playsinline id="fireworks-bg">
+    <source src="https://player.vimeo.com/external/353767401.sd.mp4?s=969a7641a0d1b892db3a119299a4a48e60d3b5b2&profile_id=164&oauth2_token_id=57447761" type="video/mp4">
+  </video>
+
+  <div id="content">
+    <!-- Lời chúc -->
+    <h1>🎂 Chúc Mừng Sinh Nhật Bé Thu Hường 🎉</h1>
+    <p>
+      🎈 Hôm nay là ngày đặc biệt, ngày mà thế giới này trở nên tươi đẹp hơn nhờ có sự hiện diện của BFF ❤️ <br />
+      Chúc BFF luôn tràn đầy sức khỏe (khỏe như trâu), hạnh phúc (mỗi ngày cầm trên tay là nghìn tỷ đồng) 💖<br />
+      khỏi bồ cũng được, có tiền là hạnh phúc và thành công trên những con đường BFF đi và lựa chọn 💖 <br />
+      Mong rằng tuổi mới sẽ mang đến cho bạn nhiều niềm vui, trải nghiệm mới mẻ, và kỷ niệm đáng nhớ 💝.<br /><br />
+      🎁 Chúc BFF có một ngày sinh nhật thật vui vẻ, bên gia đình và bạn bè yêu thương 💖<br />
+      Và đừng quên tui nheee, tui nhớ bà lắm bà ơi! 💝
+    </p>
+
+    <!-- Hình ảnh -->
+    <img src="hinh.jpg" alt="Bé Thu Hường" class="avatar" />
+    <img src="hinh2.jpg" alt="Bé Thu Hường" class="avatar" />
+
+    <!-- Nhạc -->
+    <audio id="player" controls autoplay loop>
+      <source src="Birthday Song Piano cover (Happy birthday to me XD)-yt.savetube.me.mp3" type="audio/mpeg">
+      Trình duyệt của bạn không hỗ trợ phát nhạc.
+    </audio>
+  </div>
+
+  <!-- Trái tim bay -->
+  <script>
+    function createHeart() {
+      const heart = document.createElement('div');
+      heart.className = 'heart';
+      heart.style.left = Math.random() * 100 + 'vw';
+      heart.innerText = '💖';
+      document.body.appendChild(heart);
+      setTimeout(() => heart.remove(), 5000);
+    }
+    setInterval(createHeart, 400);
+  </script>
+
+</body>
+</html>
